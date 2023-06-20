@@ -61,6 +61,14 @@ ul.scores-list li {
   margin: 0.5em 0;
 }
 
+ul.scores-list li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+ul.scores-list li:nth-child(odd) {
+  background-color: #fff;
+}
+
 input.name-input,
 input.score-input {
   margin: 1em 0;
