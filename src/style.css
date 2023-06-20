@@ -38,7 +38,6 @@ div.add {
 
 div.recent {
   display: flex;
-
   align-items: center;
 }
 
@@ -87,4 +86,24 @@ button.submit-button {
   background-color: #fff;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
   margin-left: 9em;
+}
+
+@media (max-width: 767px) {
+  section.leaderboard {
+    flex-direction: column;
+  }
+
+  div.scores-page {
+    flex-direction: column;
+  }
+
+  div.recent-scores {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+
+  div.add {
+    margin-left: 0;
+  }
 }
