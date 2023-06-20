@@ -24,12 +24,13 @@ div.scores-page {
 
 div.recent-scores {
   flex: 1;
-  margin-right: 1em;
+  margin-right: 2em;
+  margin-left: 3em;
 }
 
 div.add {
   flex: 1;
-  margin-left: 1em;
+  margin-left: 2em;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -46,7 +47,7 @@ h2 {
 }
 
 button.refresh-button {
-  margin-left: 1em;
+  margin-left: 0.5em;
 }
 
 ul.scores-list {
@@ -58,7 +59,7 @@ ul.scores-list {
 }
 
 ul.scores-list li {
-  margin: 0.5em 0;
+  padding: 0.5em;
 }
 
 ul.scores-list li:nth-child(even) {
