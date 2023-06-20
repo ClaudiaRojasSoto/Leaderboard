@@ -30,13 +30,15 @@ div.recent-scores {
 div.add {
   flex: 1;
   margin-left: 1em;
-}
-
-div.recent,
-div.add {
   display: flex;
   flex-direction: column;
   align-items: start;
+}
+
+div.recent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 h2 {
