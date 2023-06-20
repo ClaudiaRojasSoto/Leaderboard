@@ -3,7 +3,7 @@
 <div align="center">
   <br/>
 
-  <h3><b>To Do List</b></h3>
+  <h3><b>Leaderboard</b></h3>
 
 </div>
 
