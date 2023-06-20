@@ -46,7 +46,7 @@ h2 {
 }
 
 button.refresh-button {
-  margin-left: 6em;
+  margin-left: auto;
   padding: 0.3em 0.7em;
   background-color: #fff;
   box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
@@ -58,7 +58,6 @@ ul.scores-list {
   border: 2.3px solid black;
   border-radius: 2px;
   margin-top: 1em;
-  width: 95%;
 }
 
 ul.scores-list li {
@@ -98,9 +97,13 @@ button.submit-button {
   }
 
   div.recent-scores {
-    margin-right: 0;
+    margin-right: 2em;
     margin-left: 0;
     margin-bottom: 2em;
+  }
+
+  button.refresh-button {
+    margin-right: 1em;
   }
 
   div.add {
