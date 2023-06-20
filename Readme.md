@@ -171,6 +171,6 @@ Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/Leaderb
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/Leaderboard/blob/basic-page-structure/MIT.md).
+This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/Leaderboard/blob/dev/MIT.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
