@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section.leaderboard {
+  display: flex;
+  justify-content: space-around;
+  padding: 2em;
+}
+
+h1 {
+  text-align: center;
+}
+
+div.scores-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  width: 100%;
+}
+
+div.recent-scores {
+  flex: 1;
+  margin-right: 2em;
+  margin-left: 3em;
+}
+
+div.add {
+  flex: 1;
+  margin-left: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+div.recent {
+  display: flex;
+  align-items: center;
+}
+
+h2 {
+  margin-bottom: 1em;
+}
+
+button.refresh-button {
+  margin-left: auto;
+  padding: 0.3em 0.7em;
+  background-color: #fff;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+}
+
+ul.scores-list {
+  list-style-type: none;
+  padding: 0;
+  border: 2.3px solid black;
+  border-radius: 2px;
+  margin-top: 1em;
+}
+
+ul.scores-list li {
+  padding: 0.5em;
+}
+
+ul.scores-list li:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+ul.scores-list li:nth-child(odd) {
+  background-color: #fff;
+}
+
+input.name-input,
+input.score-input {
+  margin: 1em 0;
+  padding: 0.5em 2em 0.5em 1em;
+  border: 2.3px solid black;
+  border-radius: 2px;
+}
+
+button.submit-button {
+  padding: 0.3em 0.7em;
+  background-color: #fff;
+  box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+  margin-left: 9em;
+}
+
+@media (max-width: 767px) {
+  section.leaderboard {
+    flex-direction: column;
+  }
+
+  div.scores-page {
+    flex-direction: column;
+  }
+
+  div.recent-scores {
+    margin-right: 2em;
+    margin-left: 0;
+    margin-bottom: 2em;
+  }
+
+  button.refresh-button {
+    margin-right: 1em;
+  }
+
+  div.add {
+    margin-left: 0;
+  }
+}
