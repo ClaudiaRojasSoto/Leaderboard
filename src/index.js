@@ -1,8 +1,8 @@
 import './style.css'
-import { createNewGame, getGameScores, postGameScore } from './modules/api';
+import { createNewGame } from './modules/api';
 import { refreshScores, submitScore } from './modules/ui';
 
-// Función asincrónica para inicializar el juego
+// Async function to start the game
 async function initGame() {
   // Get the game id from local storage if it exists, otherwise create a new game
   let gameId = localStorage.getItem('gameId');
