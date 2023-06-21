@@ -1,6 +1,18 @@
 import './style.css'
-import { createNewGame } from './modules/api';
+import { createNewGame, getGameScores, postGameScore } from './modules/api';
 import { refreshScores, submitScore } from './modules/ui';
+
+// Función asincrónica para inicializar el juego
+async function initGame() {
+  // Get the game id from local storage if it exists, otherwise create a new game
+  let gameId = localStorage.getItem('gameId');
+  if (!gameId) {
+    gameId = await createNewGame('House to House');
+    if (!gameId) {
+      console.error('Failed to create a new game. Check your internet connection and try again.');
+    }
+  }
+}
 
 document.addEventListener('DOMContentLoaded', (event) => {
   const refreshButton = document.querySelector('.refresh-button');
@@ -16,9 +28,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
   // Event to "Submit" button
   submitButton.addEventListener('click', () => {
-    submitScore(nameInput, scoreInput);
+    const userName = nameInput.value;
+    const score = scoreInput.value;
+    submitScore(userName, score);
+    // Clean the inputs after submit
+    nameInput.value = '';
+    scoreInput.value = '';
   });
 
-  // Create the game when the page charge
-  createNewGame('House to House');
+  // Initialize the game
+  initGame();
 });
