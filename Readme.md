@@ -66,6 +66,7 @@
 -   **[ES6 Syntax]**
 -   **[JavaScript Functionality]**
 -   **[Gitflow]**
+-   **[Send and receive data from API]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -83,52 +84,52 @@
 -Node.js
 -npm
 
--Clone this repository to your local machine using:
+> -Clone this repository to your local machine using:
 
- git clone https://github.com/ClaudiaRojasSoto/Leaderboard.git
+>  git clone https://github.com/ClaudiaRojasSoto/Leaderboard.git
 
--Navigate to the project folder:
+> -Navigate to the project folder:
 
- cd Leaderboard
+> cd Leaderboard
 
--Install the project dependencies:
+> -Install the project dependencies:
 
-npm install
+> npm install
 
-o start the development server, run the following command:
+> o start the development server, run the following command:
 
-npm start
+> npm start
 
 ### Project Structure
 
-The project follows the following folder and file structure:
+> The project follows the following folder and file structure:
 
-/src: Contains the source files of the application.
-/src/index.js: Main entry point of the JavaScript application.
-/src/style.css: CSS file for the application styles.
-/src/index.html: Base HTML file of the application.
-/dist: Contains the generated production files.
-webpack.config.js: Webpack configuration file.
+> /src: Contains the source files of the application.
+> /src/index.js: Main entry point of the JavaScript application.
+> /src/style.css: CSS file for the application styles.
+> /src/index.html: Base HTML file of the application.
+> /dist: Contains the generated production files.
+> webpack.config.js: Webpack configuration file.
 
 ### Setup
 
-Clone this repository to your desired folder: https://github.com/ClaudiaRojasSoto/Leaderboard.git
+> Clone this repository to your desired folder: https://github.com/ClaudiaRojasSoto/Leaderboard.git
 
 ### Install
 
-Install this project with: install WebLint and ESLint
+> Install this project with: install WebLint and ESLint
 
 ### Usage
 
-To run the project, execute the following command: just need a web Browser
+> To run the project, execute the following command: just need a web Browser
 
 ### Run tests
 
-To run tests, run the following command: you just need a simple web browser to run this project for a test
+> To run tests, run the following command: you just need a simple web browser to run this project for a test
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author1**
+👤 **Author**
 
 -   GitHub: [@githubhandle](https://github.com/ClaudiaRojasSoto)
 -   LinkedIn: [LinkedIn](https://www.linkedin.com/in/claudia-soto-260504208/)
@@ -139,15 +140,15 @@ To run tests, run the following command: you just need a simple web browser to r
 ## 🔭 Future Features <a name="future-features"></a>
 
 
--   [ ] **[Send and receive data from API]**
+-   [] 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🤝 Contributing <a name="contributing"></a>
 
-Contributions, issues, and feature requests are welcome!
+> Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/Leaderboard/issues).
+> Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/Leaderboard/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -171,6 +172,6 @@ Feel free to check the [issues page](https://github.com/ClaudiaRojasSoto/Leaderb
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/Leaderboard/blob/basic-page-structure/MIT.md).
+> This project is [MIT licensed](https://github.com/ClaudiaRojasSoto/Leaderboard/blob/basic-page-structure/MIT.md).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
