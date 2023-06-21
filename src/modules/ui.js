@@ -20,5 +20,9 @@ export const refreshScores = async (scoresList) => {
 };
 
 export const submitScore = async (userName, score) => {
-  await postGameScore(userName, score);
-};
+    await postGameScore(userName, score);
+  
+    // Refresh the scores list after a new score is posted.
+    const scoresList = document.querySelector('.scores-list');
+    refreshScores(scoresList);
+  };
