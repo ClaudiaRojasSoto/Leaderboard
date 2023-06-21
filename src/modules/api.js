@@ -1,5 +1,6 @@
-const API_BASE_URL =
-  'https://us-central1-js-capstone-backend.cloudfunctions.net/api/';
+import handleFetchError from './errorHandler.js';
+
+const API_BASE_URL = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/'; // Make sure to import the handleFetchError function from the index.js file correctly
 
 export const createNewGame = async (gameName) => {
   try {
@@ -18,14 +19,15 @@ export const createNewGame = async (gameName) => {
     }
 
     const data = await response.json();
-    const gameId = data.result.split(': ')[1]; // Storage the ID of the game
+    const gameId = data.result.split(': ')[1]; // Store the ID of the game
 
     // Store the game id in local storage
     localStorage.setItem('gameId', gameId);
 
     return gameId;
   } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
+    handleFetchError(error);
+    throw error; // Throw the error again to maintain consistency in return values
   }
 };
 
@@ -42,7 +44,8 @@ export const getGameScores = async () => {
     const data = await response.json();
     return data.result;
   } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
+    handleFetchError(error);
+    throw error; // Throw the error again to maintain consistency in return values
   }
 };
 
@@ -58,7 +61,7 @@ export const postGameScore = async (userName, score) => {
       },
       body: JSON.stringify({
         user: userName,
-        score: score,
+        score,
       }),
     });
 
@@ -69,6 +72,7 @@ export const postGameScore = async (userName, score) => {
     const data = await response.json();
     return data.result;
   } catch (error) {
-    console.error('There was a problem with the fetch operation:', error);
+    handleFetchError(error);
+    return null; // Return a default value on error
   }
 };
