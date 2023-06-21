@@ -129,7 +129,7 @@
 
 ## 👥 Authors <a name="authors"></a>
 
-👤 **Author**
+👤 **Claudia Rojas**
 
 -   GitHub: [@githubhandle](https://github.com/ClaudiaRojasSoto)
 -   LinkedIn: [LinkedIn](https://www.linkedin.com/in/claudia-soto-260504208/)
