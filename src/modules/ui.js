@@ -2,16 +2,10 @@ import { getGameScores, postGameScore } from './api.js';
 
 export const refreshScores = async (scoresList) => {
   const scores = await getGameScores();
-
-  // Clear the scores list
   while (scoresList.firstChild) {
     scoresList.firstChild.remove();
   }
-
-  // Sort scores from highest to lowest
   scores.sort((a, b) => b.score - a.score);
-
-  // Add new scores to the list
   scores.forEach((score) => {
     const li = document.createElement('li');
     li.textContent = `${score.user}: ${score.score}`;
@@ -20,9 +14,12 @@ export const refreshScores = async (scoresList) => {
 };
 
 export const submitScore = async (userName, score) => {
-  await postGameScore(userName, score);
+  const body = {
+    user: userName,
+    score: Number(score), // Make sure the score is a number
+  };
 
-  // Refresh the scores list after a new score is posted.
+  await postGameScore(body);
   const scoresList = document.querySelector('.scores-list');
   refreshScores(scoresList);
 };

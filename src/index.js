@@ -1,17 +1,5 @@
 import './style.css';
-import { createNewGame } from './modules/api.js';
 import { refreshScores, submitScore } from './modules/ui.js';
-import handleFetchError from './modules/errorHandler.js';
-
-async function initGame() {
-  let gameId = localStorage.getItem('gameId');
-  if (!gameId) {
-    gameId = await createNewGame('House to House');
-    if (!gameId) {
-      handleFetchError(new Error('Failed to create a new game. Check your internet connection and try again.'));
-    }
-  }
-}
 
 document.addEventListener('DOMContentLoaded', () => {
   const refreshButton = document.querySelector('.refresh-button');
@@ -31,6 +19,4 @@ document.addEventListener('DOMContentLoaded', () => {
     nameInput.value = '';
     scoreInput.value = '';
   });
-
-  initGame();
 });
