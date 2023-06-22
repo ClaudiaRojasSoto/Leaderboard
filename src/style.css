@@ -53,14 +53,14 @@ h2 {
 button.refresh-button {
   margin-left: auto;
   padding: 0.3em 0.7em;
-  background-color: #fff;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+  background-color: #e8c1f0;
+  box-shadow: 3px 3px 1px rgb(205, 188, 188);
 }
 
 ul.scores-list {
   list-style-type: none;
   padding: 0;
-  border: 2.3px solid black;
+  border: 2.3px solid #e8c1f0;
   border-radius: 2px;
   margin-top: 1em;
 }
@@ -70,25 +70,26 @@ ul.scores-list li {
 }
 
 ul.scores-list li:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #7165d0;
 }
 
 ul.scores-list li:nth-child(odd) {
-  background-color: #fff;
+  background-color: #e8c1f0;
 }
 
 input.name-input,
 input.score-input {
   margin: 1em 0;
   padding: 0.5em 2em 0.5em 1em;
-  border: 2.3px solid black;
+  border: 2.3px solid #e8c1f0;
   border-radius: 2px;
+  background-color: #e8c1f0;
 }
 
 button.submit-button {
   padding: 0.3em 0.7em;
-  background-color: #fff;
-  box-shadow: 3px 3px 1px rgba(0, 0, 0, 1);
+  background-color: #e8c1f0;
+  box-shadow: 3px 3px 1px rgb(205, 188, 188);
   margin-left: 9em;
 }
 
@@ -109,6 +110,7 @@ button.submit-button {
 
   button.refresh-button {
     margin-right: 1em;
+    color: #e8c1f0;
   }
 
   div.add {
