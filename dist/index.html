@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+  <script defer src="/Leaderboard/bundle.js"></script></head>
+  <body>
+    <h1>Leaderboard</h1>
+    <section class="leaderboard">
+      <div class="scores-page">
+        <div class="recent-scores">
+          <div class="recent">
+            <h2>Recent scores</h2>
+            <button class="refresh-button" type="button">Refresh</button>
+          </div>
+          <div class="scores">
+            <ul class="scores-list">
+              <!-- li elements are generated with js-->
+            </ul>
+          </div>
+        </div>
+        <div class="add">
+          <h2>Add your score</h2>
+          <input class="name-input" type="text" placeholder="Your name" />
+          <input class="score-input" type="text" placeholder="Your score" />
+          <button class="submit-button" type="button">Submit</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="bundle.js"></script>
+  </body>
+</html>
