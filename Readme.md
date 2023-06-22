@@ -140,7 +140,7 @@
 ## 🔭 Future Features <a name="future-features"></a>
 
 
--   [] 
+-   **[User Authentication]** 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
