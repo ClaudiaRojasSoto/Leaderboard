@@ -3,6 +3,9 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-image: url('../images/background.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 section.leaderboard {
@@ -13,6 +16,7 @@ section.leaderboard {
 
 h1 {
   text-align: center;
+  color: #e8c1f0;
 }
 
 div.scores-page {
@@ -43,6 +47,7 @@ div.recent {
 
 h2 {
   margin-bottom: 1em;
+  color: #e8c1f0;
 }
 
 button.refresh-button {
