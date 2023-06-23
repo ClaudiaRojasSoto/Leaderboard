@@ -154,9 +154,9 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!***********************************!*\
   !*** ./src/images/background.jpg ***!
   \***********************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+/***/ ((module) => {
 
-eval("module.exports = __webpack_require__.p + \"images/background.jpg\";\n\n//# sourceURL=webpack://leaderboard/./src/images/background.jpg?");
+eval("module.exports = \"/images/background.jpg\";\n\n//# sourceURL=webpack://leaderboard/./src/images/background.jpg?");
 
 /***/ })
 
@@ -225,11 +225,6 @@ eval("module.exports = __webpack_require__.p + \"images/background.jpg\";\n\n//#
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
-/******/ 	
-/******/ 	/* webpack/runtime/publicPath */
-/******/ 	(() => {
-/******/ 		__webpack_require__.p = "/Leaderboard/";
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/nonce */

@@ -7,7 +7,7 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Leaderboard/',
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -20,6 +20,7 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: 'images/[name][ext]',
+          publicPath: '/'
         },
       },
     ],
