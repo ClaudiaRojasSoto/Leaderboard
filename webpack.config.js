@@ -5,9 +5,10 @@ module.exports = {
   mode: 'development',
   entry: './src/index.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/Leaderboard/',
+    clean: true,
+    publicPath: '/',
   },
   module: {
     rules: [
@@ -39,5 +40,8 @@ module.exports = {
       directory: path.resolve(__dirname, 'dist'),
     },
     open: true,
+  },
+  optimization: {
+    runtimeChunk: 'single',
   },
 };
