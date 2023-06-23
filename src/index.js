@@ -1,4 +1,8 @@
 import './style.css';
+import backgroundImage from './images/background.jpg';
+
+document.body.style.backgroundImage = `url(${backgroundImage})`;
+
 import { refreshScores, submitScore } from './modules/ui.js';
 
 document.addEventListener('DOMContentLoaded', () => {
