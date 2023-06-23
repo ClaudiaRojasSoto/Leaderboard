@@ -7,7 +7,7 @@
  * or disable the default devtool with "devtool: false".
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
  */
-(self["webpackChunkleaderboard"] = self["webpackChunkleaderboard"] || []).push([["main"],{
+(self["webpackChunkleaderboard"] = self["webpackChunkleaderboard"] || []).push([["index"],{
 
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
@@ -36,16 +36,6 @@ eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n
 /***/ ((module) => {
 
 eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://leaderboard/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
-
-/***/ }),
-
-/***/ "./src/images/background.jpg":
-/*!***********************************!*\
-  !*** ./src/images/background.jpg ***!
-  \***********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (__webpack_require__.p + \"images/background.jpg\");\n\n//# sourceURL=webpack://leaderboard/./src/images/background.jpg?");
 
 /***/ }),
 
@@ -125,7 +115,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/background.jpg */ \"./src/images/background.jpg\");\n/* harmony import */ var _modules_ui_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui.js */ \"./src/modules/ui.js\");\n\n\n\n\n\ndocument.body.style.backgroundImage = `url(${_images_background_jpg__WEBPACK_IMPORTED_MODULE_1__[\"default\"]})`;\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const refreshButton = document.querySelector('.refresh-button');\n  const submitButton = document.querySelector('.submit-button');\n  const nameInput = document.querySelector('.name-input');\n  const scoreInput = document.querySelector('.score-input');\n  const scoresList = document.querySelector('.scores-list');\n\n  refreshButton.addEventListener('click', () => {\n    (0,_modules_ui_js__WEBPACK_IMPORTED_MODULE_2__.refreshScores)(scoresList);\n  });\n\n  submitButton.addEventListener('click', () => {\n    const userName = nameInput.value;\n    const score = scoreInput.value;\n    (0,_modules_ui_js__WEBPACK_IMPORTED_MODULE_2__.submitScore)(userName, score);\n    nameInput.value = '';\n    scoreInput.value = '';\n  });\n});\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _images_background_jpg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./images/background.jpg */ \"./src/images/background.jpg\");\n/* harmony import */ var _modules_ui_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/ui.js */ \"./src/modules/ui.js\");\n\n\n\n\n\ndocument.body.style.backgroundImage = `url(${_images_background_jpg__WEBPACK_IMPORTED_MODULE_1__})`;\n\ndocument.addEventListener('DOMContentLoaded', () => {\n  const refreshButton = document.querySelector('.refresh-button');\n  const submitButton = document.querySelector('.submit-button');\n  const nameInput = document.querySelector('.name-input');\n  const scoreInput = document.querySelector('.score-input');\n  const scoresList = document.querySelector('.scores-list');\n\n  refreshButton.addEventListener('click', () => {\n    (0,_modules_ui_js__WEBPACK_IMPORTED_MODULE_2__.refreshScores)(scoresList);\n  });\n\n  submitButton.addEventListener('click', () => {\n    const userName = nameInput.value;\n    const score = scoreInput.value;\n    (0,_modules_ui_js__WEBPACK_IMPORTED_MODULE_2__.submitScore)(userName, score);\n    nameInput.value = '';\n    scoreInput.value = '';\n  });\n});\n\n\n//# sourceURL=webpack://leaderboard/./src/index.js?");
 
 /***/ }),
 
@@ -156,6 +146,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   refreshScores: () => (/* binding */ refreshScores),\n/* harmony export */   submitScore: () => (/* binding */ submitScore)\n/* harmony export */ });\n/* harmony import */ var _api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./api.js */ \"./src/modules/api.js\");\n\n\nconst refreshScores = async (scoresList) => {\n  const scores = await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.getGameScores)();\n  while (scoresList.firstChild) {\n    scoresList.firstChild.remove();\n  }\n  scores.sort((a, b) => b.score - a.score);\n  scores.forEach((score) => {\n    const li = document.createElement('li');\n    li.textContent = `${score.user}: ${score.score}`;\n    scoresList.appendChild(li);\n  });\n};\n\nconst submitScore = async (userName, score) => {\n  const body = {\n    user: userName,\n    score: Number(score), // Make sure the score is a number\n  };\n\n  await (0,_api_js__WEBPACK_IMPORTED_MODULE_0__.postGameScore)(body);\n  const scoresList = document.querySelector('.scores-list');\n  refreshScores(scoresList);\n};\n\n\n//# sourceURL=webpack://leaderboard/./src/modules/ui.js?");
+
+/***/ }),
+
+/***/ "./src/images/background.jpg":
+/*!***********************************!*\
+  !*** ./src/images/background.jpg ***!
+  \***********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"images/background.jpg\";\n\n//# sourceURL=webpack://leaderboard/./src/images/background.jpg?");
 
 /***/ })
 
