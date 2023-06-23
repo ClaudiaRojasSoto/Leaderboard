@@ -1,5 +1,9 @@
 import './style.css';
+import backgroundImage from './images/background.jpg';
+
 import { refreshScores, submitScore } from './modules/ui.js';
+
+document.body.style.backgroundImage = `url(${backgroundImage})`;
 
 document.addEventListener('DOMContentLoaded', () => {
   const refreshButton = document.querySelector('.refresh-button');
